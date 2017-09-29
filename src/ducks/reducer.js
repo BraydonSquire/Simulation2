@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const initialState = {
     username: '',
     userId: '',
@@ -55,4 +56,10 @@ function reducer(state = initialState, action) {
         default: return state;
     }
 }
+=======
+
+
+
+
+>>>>>>> f8ae917046420e3976920f14a450a30854296f0d
 
