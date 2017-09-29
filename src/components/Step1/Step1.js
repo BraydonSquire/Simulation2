@@ -10,7 +10,7 @@ export default class Step1 extends Component {
                 </div>
                 <div className="wizard_stepHighlight_container">
                     <span>Step 1</span>
-                    <div className="stepHightlight_container">
+                    <div className="stepHighlight_container">
                         <img />
                         <img />
                         <img />
@@ -24,7 +24,7 @@ export default class Step1 extends Component {
                     </div>
                     <input className="step1_propName_input" />
                         <div className="step1_propDescription_container">
-                            <span>Property Descripton</span>
+                            <span>Property Description</span>
                     </div>
                     <textarea className="step1_propDescription_textarea"></textarea>
                     <div className="step1_btn_container">

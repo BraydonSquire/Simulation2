@@ -2,7 +2,7 @@ body {
     font-family: sans-serif;
 }
 
-.wizard_step_contaniner {
+.wizard_step_container {
     width: 50%;
     min-height: 900px;
     height: auto;
@@ -27,7 +27,7 @@ body {
     margin-top: 20px;
 }
 
-.stepHightlight_container {
+.stepHighlight_container {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -44,7 +44,7 @@ body {
     margin-top: 35px;
 }
 
-.step1_name_contanier {
+.step1_name_container {
     width: 70%;
     margin-bottom: 3px;
 }
