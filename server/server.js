@@ -31,10 +31,10 @@ app.post('/api/auth/register', auth_controller.register);
 app.post('/api/auth/logout', auth_controller.logout);
 
     // Properties
-app.post('/api/properties');
-app.get('/api/properties');
-app.delete('/api/properties/:id');
-// app.get('/api/properties/filter');
+app.post('/api/properties', properties_controller.createNewProperty);
+app.get('/api/properties', properties_controller.getAllProperties);
+app.delete('/api/properties/:id', properties_controller.deleteProperty);
+// app.get('/api/properties/filter', properties_controller.filter);
 
 
 // Express is helping my server to listen on port 3000
