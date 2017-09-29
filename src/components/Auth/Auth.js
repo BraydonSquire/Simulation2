@@ -18,7 +18,7 @@ class Auth extends Component{
                 
             </div>
                 <div className="button-container">
-                <button className="login-button">Login</button>
+               <Link to="/dashboard"> <button className="login-button">Login</button> </Link>
                 <button className="register-button">Register</button>
                 </div>
         </div>
