@@ -4,6 +4,7 @@ module.exports = {
         const { session } = req;
         const { propertyName, propertyDescription, address, city, state, zip, imageUrl, loan, monthlyMortgage, desiredRent, userId } = req.body
         console.log(dbInstance)
+        
         dbInstance.createNewProperty([ propertyName, propertyDescription, address, city, state, zip, imageUrl, loan, monthlyMortgage, desiredRent, userId ])
         .then( () => res.status(200).send() )
         .catch( (err) => res.status(500).send(err) )
@@ -12,7 +13,8 @@ module.exports = {
     getAllProperties: ( req, res, next ) => {
         const dbInstance = req.app.get('db');
         const { session } = req;
-        
+        session.user={"id":1}
+        console.log(session)
         dbInstance.get_all_properties()
         .then( () => res.status(200).send( Properties ) )
         .catch( (err) => res.status(500).send(err) )

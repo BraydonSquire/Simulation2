@@ -1,37 +1,28 @@
-let id = 1;
-
 module.exports = {
-    
-        login: (req, res, next) => {
-            const {session} = req;
-            const {username, password} = req.body;
-    
-            const user = users.find(
-                user => user.username === username 
-                && user.password === password);
-    
-                if(user) {
-                    session.user.username = user.username;
-                    res.status(200).send(session.user);
-                } else {
-                    res.status(500).send("Unauthorized.");
-                }
-        },
-    
-        register: (req, res, next) => {
-            const {session} = req;
-            const {username, password} = req.body;
-    
-            users.push({id, username, password});
-            id++;
-    
-            session.user.username = username;
-            res.status(200).send(session.user);
-        },
+
+    login: (req, res, next) => {
+        const dbInstance = req.app.get('db')
+        const { session } = req;
+        const { username, password } = req.body;
+
+        dbInstance.get_all_properties()
+            .then( () => res.status(200).send( properties ) )
+            .catch( () => res.status(500).send() );
+    },
+
+    register: (req, res, next) => {
+        const dbInstance = req.app.get('db')
+        const { session } = req;
+        const { username, password } = req.body;
         
-        logout: (req, res, next) => {
-            const {session} = req;
-            session.destroy();
-            res.status(200).send(req.session);
-        }    
+        dbInstance.register([ username, password ])
+            .then( () => res.status(200).send() )
+            .catch( () => res.status(500).send() );
+    },
+
+    logout: (req, res, next) => {
+        const { session } = req;
+        session.destroy();
+        res.status(200).send();
     }
+}
