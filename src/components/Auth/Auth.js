@@ -7,13 +7,20 @@ class Auth extends Component{
         <div className="daddyDiv">
             <div className="display-box">
                 <div className="houser-logo">
-
+                    <img src="https://raw.githubusercontent.com/DevMountain/simulation-2/master/assets/auth_logo.png" />
+                </div>
                 </div>
                 <div className="input-container">
+                    <p> Username</p>
                     <input type="text" className="username"/>
+                    <p> Password </p>
                     <input type="text" className="password"/>
-                </div>
+                
             </div>
+                <div className="button-container">
+                <button className="login-button">Login</button>
+                <button className="register-button">Register</button>
+                </div>
         </div>
         )
     }

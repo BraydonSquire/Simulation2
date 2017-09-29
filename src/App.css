@@ -1,5 +1,9 @@
 .parent-container{
   height: 100vh;
   width: 100vw;
-  background-color: blue;
+  background-color: #AFD4C0;
+  display: flex;
+  justify-content: center;
+  
 }
+

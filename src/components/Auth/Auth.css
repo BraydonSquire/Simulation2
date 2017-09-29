@@ -1,0 +1,37 @@
+.daddyDiv{
+    width: 60vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6F0F0
+}
+.display-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container{
+    display: flex;
+    justify-content: space-around;
+    height: 10vh;
+    width: 30vw;
+    font-family: sans-serif;
+    
+}
+
+.login-button{
+    margin-top: 10px;
+    width: 150px;
+    background-color: #8AEA92;
+    font-family: sans-serif;
+    font-size: large;
+}
+
+.register-button{
+    width: 150px;
+    margin-top: 10px;
+    font-size: large;
+}

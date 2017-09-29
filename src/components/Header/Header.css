@@ -1,0 +1,17 @@
+.header{
+    width:100vw;
+    height:75px;
+    background-color:#519872;
+    display: flex;
+    justify-content: space-around;
+}
+.header-spacing{
+    width:50vw;
+    color: white;
+    margin-top:20px;
+    font-size:200%;
+}
+.space{
+    margin-left: 260px;
+    font-size: 50%
+}
