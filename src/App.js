@@ -3,18 +3,19 @@ import Router from './Router'
 import './App.css';
 import Header from './components/Header/Header'
 
+
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="extralarge">
         <Header />
       
-      <div className="parent-container">
+      <div  className="parent-container" >
         
         {Router}
 
       </div>
-      </div>
+    </div>
     );
   }
 }
